@@ -115,7 +115,7 @@
 # # the biggest impacting factor is n Hence Time complexity will be
 # O(log n)
 
- # 3. Given a recurrence relation, solve it using the recursive tree approach:
+# 3. Given a recurrence relation, solve it using the recursive tree approach:
 # a. T(n) = 2T(n-1) +1
 # as this is a recursive tree approach I am not able to draw a tree here.
 # but the calculation will be as per GP series formula
