@@ -1,20 +1,19 @@
-import openai
-import os
-import requests
+import openai, os, requests
 
 openai.api_type = "azure"
 # Azure OpenAI on your own data is only supported by the 2023-08-01-preview API version
 openai.api_version = "2023-08-01-preview"
 
 # Azure OpenAI setup
-openai.api_base = "https://openaiedwtest.openai.azure.com/" # Add your endpoint here
-openai.api_key = "a326b45858124a409fd03aa5660b2faa" # Add your OpenAI API key here
-deployment_id = "Demo" # Add your deployment ID here
+openai.api_base = "https://openaiedwtest.openai.azure.com/"  # Add your endpoint here
+openai.api_key = "a326b45858124a409fd03aa5660b2faa"  # Add your OpenAI API key here
+deployment_id = "Demo"  # Add your deployment ID here
 
-# Azure Cognitive Search setup
-search_endpoint = "https://pbiworkspaceauditsearch.search.windows.net"; # Add your Azure Cognitive Search endpoint here
-search_key = "0bVIwQxmuoNKJtpZS3imWB8tpHEn43wKWj64KmIzfzAzSeAO2C66"; # Add your Azure Cognitive Search admin key here
-search_index_name = "first"; # Add your Azure Cognitive Search index name here
+# Azure AI Search setup
+search_endpoint = "https://pbiworskspaceauditsearch.search.windows.net";  # Add your Azure AI Search endpoint here
+search_key = "ZJHKp26f1HXxxFqFe3WG0vDH1uEQXHR6dmURSdc4rvAzSeASwdpo"  # Add your Azure AI Search admin key here
+search_index_name = "first"  # Add your Azure AI Search index name here
+
 
 def setup_byod(deployment_id: str) -> None:
     """Sets up the OpenAI Python SDK to use your own data for the chat endpoint.
@@ -40,10 +39,11 @@ def setup_byod(deployment_id: str) -> None:
 
     openai.requestssession = session
 
+
 setup_byod(deployment_id)
 
-
-message_text = [{"role": "user", "content": "list me all the roles present?"}]
+message_text = [
+    {"role": "user", "content": "tell me the email id for Rohan Nunes?"}]
 
 completion = openai.ChatCompletion.create(
     messages=message_text,
