@@ -7,7 +7,7 @@ app.secret_key = 'your_secret_key'
 
 @app.route('/')
 def index():
-    return '<h1>Welcome to the Flask Sessions Example!</h1> <h3><a href = "/login" >login</a></h3>'
+    return '<h1>Welcome to the Flask-Assignment Sessions Example!</h1> <h3><a href = "/login" >login</a></h3>'
 
 
 # Visit http://127.0.0.1:5000/login to log in with a username.

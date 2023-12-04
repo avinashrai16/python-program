@@ -1,0 +1,24 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Data Update</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <p>Count: <span id="count">0</span></p>
+    <p>Random Number: <span id="number">0</span></p>
+    <script>
+        var socket = io.connect('http://' + document.domain + ':' + location.port + '/test');
+
+        socket.on('update', function(data){
+            $('#count').text(data.count);
+            $('#number').text(data.number);
+        });
+    </script>
+</body>
+</html>

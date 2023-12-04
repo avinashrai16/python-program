@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Welcome to the Flask URL Parameters Example!'
+    return 'Welcome to the Flask-Assignment URL Parameters Example!'
 
 
 # http://127.0.0.1:5000/greet?name=avinash  this will display as per the name parameter i.e. avinash in this case

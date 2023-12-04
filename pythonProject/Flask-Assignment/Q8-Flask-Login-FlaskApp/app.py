@@ -4,14 +4,14 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key'  # Change this to a secret key for production
 
-# Initialize Flask-Login
+# Initialize Flask-Assignment-Login
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 
 # Simple in-memory user database for demonstration purposes
 users = {'user1': {'password': 'password1'}, 'user2': {'password': 'password2'}}
 
-# User class for Flask-Login
+# User class for Flask-Assignment-Login
 class User(UserMixin):
     pass
 
