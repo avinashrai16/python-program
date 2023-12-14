@@ -1,0 +1,12 @@
+1. Build a Flask app that scrapes data from multiple websites and displays it on your site.
+You can try to scrap websites like youtube , amazon and show data on output pages and deploy it on cloud
+platform .
+
+GIT Code URL : https://github.com/avinashrai16/Flask-Web-Scraper
+Application Cloud URL (render) :https://image-scrapper-a6i6.onrender.com
+
+2. Create a Flask app that consumes data from external APIs and displays it to users.
+Try to find an public API which will give you a data and based on that call it and deploy it on cloud platform
+
+GIT Code URL :https://github.com/avinashrai16/weather_local_app
+Application Cloud URL (render):https://weather-app-local-avinash.onrender.com
