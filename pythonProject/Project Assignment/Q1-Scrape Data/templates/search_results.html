@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+<h1>Top 10 image result from Google on <u>{{ query }}</u></h1>
+    <h3>Click on the below URLs to see the relevant information</h3>
+    <ul>
+        {% for image in image_results %}
+            <li><a href="{{ image.link }}" target="_blank">{{ image.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
